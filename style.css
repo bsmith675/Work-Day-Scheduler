@@ -16,9 +16,9 @@ body {
   .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color: orange;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid rgb(0, 0, 0);
   }
   
   .description {
@@ -33,7 +33,7 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;
+    border-top: 1px solid orange;
   }
   
   .hour {
@@ -53,16 +53,16 @@ body {
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: orange;
     color: white;
   }
   
   .saveBtn {
-    border-left: 1px solid black;
+    border-left: 1px solid orange;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06aed5;
-    color: white;
+    background-color: blue;
+    color: orange;
   }
   
   .saveBtn i:hover {
