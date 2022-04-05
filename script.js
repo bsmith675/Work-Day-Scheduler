@@ -28,11 +28,11 @@ for (time = 9; time <= 17; time++) {
     workDayPlanner.push(dataPlanner);
 }
 function currentDate() {
-    var cDate = moment().format("dddd, MMMM D0");
+    var cDate = moment().format("dddd, MMMM Do");
     $("#currentDay").text(cDate);
 }
 function storePlannerData() {
-    localStorage.setitem("dayPlanner", JSON.stringify(workDayPlanner));
+    localStorage.setItem("dayPlanner", JSON.stringify(workDayPlanner));
 }
 function plannerDataDisplay() {
     workDayPlanner.forEach(function (hour) {
@@ -72,7 +72,7 @@ workDayPlanner.forEach(function (hour) {
     }
     hInput.append(hData);
 
-    var saceIcon = $("<i class='far fa-save fa-lg'></i>");
+    var saveIcon = $("<i class='far fa-save fa-lg'></i>");
     var saveEnd = $("<button>").addClass("col-md-1 saveBtn");
 
     saveEnd.append(saveIcon);
@@ -81,6 +81,7 @@ workDayPlanner.forEach(function (hour) {
 
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
+    
     var saveIndex = $(this).siblings(".description").children().attr("id");
     workDayPlanner[saveIndex].dataPlanner = $(this)
         .siblings(".description")
