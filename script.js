@@ -71,4 +71,8 @@ workDayPlanner.forEach(function (hour) {
         hData.addClass("past");
     }
     hInput.append(hData);
+
+    var saceIcon = $("<i class='far fa-save fa-lg'></i>");
+    var saveEnd = $("<button>").addClass("col-md-1 saveBtn");
+    
 }
