@@ -27,3 +27,7 @@ for (time = 9; time <= 17; time++) {
     };
     workDayPlanner.push(dataPlanner);
 }
+function currentDate() {
+    var cDate = moment().format("dddd, MMMM D0");
+    $("#currentDay").text(cDate);
+}
