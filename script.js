@@ -48,3 +48,19 @@ function dataLoader() {
     plannerDataDisplay();
     storePlannerData();
 }
+workDayPlanner.forEach(function (hour) {
+    var tRow = $("<form>");
+    tRow.addClass("row");
+    $(".container").append(tRow);
+
+    var tField = $("<div>");
+    tField.addClass("col-md-2 hour");
+    tField.text(hour.dHour + hour.ampm);
+
+    var hData = $("<textarea>");
+    hData.attr("id", hour.id);
+
+    var hInput = $("<div>");
+    hInput.addClass("col-md-9 description p-0");
+    
+}
