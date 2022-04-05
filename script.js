@@ -79,4 +79,19 @@ workDayPlanner.forEach(function (hour) {
     tRow.append(tField, hInput, saveEnd);
 });
 
+$(".saveBtn").on("click", function (event) {
+    event.preventDefault();
+    var saveIndex = $(this).siblings(".description").children().attr("id");
+    workDayPlanner[saveIndex].dataPlanner = $(this)
+        .siblings(".description")
+        .children()
+        .val();
+
+    storePlannerData();
+    plannerDataDisplay();
+});
+
+currentDate();
+
+dataLoader();
 
