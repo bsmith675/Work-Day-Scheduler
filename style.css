@@ -37,9 +37,9 @@ body {
   }
   
   .hour {
-    background-color: #ffffff;
-    color: #000000;
-    border-top: 1px dashed #000000;
+    background-color: orange;
+    color: blue;
+    border-top: 1px dashed blue;
   }
   
   .past {
@@ -53,12 +53,12 @@ body {
   }
   
   .future {
-    background-color: orange;
+    background-color: blue;
     color: white;
   }
   
   .saveBtn {
-    border-left: 1px solid orange;
+    border-left: 1px solid blue;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: blue;
