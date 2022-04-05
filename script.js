@@ -31,3 +31,9 @@ function currentDate() {
     var cDate = moment().format("dddd, MMMM D0");
     $("#currentDay").text(cDate);
 }
+
+function plannerDataDisplay() {
+    workDayPlanner.forEach(function (hour) {
+        $("#" + hour.id).val(hour.dataPlanner);
+    });
+}
