@@ -39,3 +39,12 @@ function plannerDataDisplay() {
         $("#" + hour.id).val(hour.dataPlanner);
     });
 }
+
+function dataLoader() {
+    var dataLoad = JSON.parse(localStorage.getItem("dayPlanner"));
+    if (dataLoad) {
+        workDayPlanner = dataLoad;
+    }
+    plannerDataDisplay();
+    storePlannerData();
+}
