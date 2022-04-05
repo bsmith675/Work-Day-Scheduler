@@ -62,5 +62,13 @@ workDayPlanner.forEach(function (hour) {
 
     var hInput = $("<div>");
     hInput.addClass("col-md-9 description p-0");
-    
+
+    if (hour.time == moment().format("HH")) {
+        hData.addClass("present");
+    } else if (hour.time > moment().format("HH")) {
+        hData.addClass("future");
+    } else if (hour.time < moment().format("HH")) {
+        hData.addClass("past");
+    }
+    hInput.append(hData);
 }
