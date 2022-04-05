@@ -5,4 +5,15 @@ for (time = 9; time <= 17; time++) {
     var id = time - 9;
     var ampm = "";
     var dHour = 0;
+
+    if (time === 12) {
+        dHour = 12;
+        ampm = "pm";
+    }   else if (time > 12) {
+        ampm = "pm";
+        dHour = time - 12;
+    }   else if (time < 12) {
+        ampm = "am";
+        dHour = time;
+    }
 }
